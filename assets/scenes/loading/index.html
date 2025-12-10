@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="stage">
+        <div class="camera">
+          <div class="text" id="loading-status">Caricamento in corso |</div>
+          <div class="placeholder" id="pong-container"></div>
+          <div class="text">La live inizierà a breve<set/div>
+        </div>
+      </div>
+    </div>
+
+    <script src="pong.js"></script>
+    <script src="loading.js"></script>
+    <script type="module" src="../rt.js"></script>
+
+     <script>
+      setTimeout(() => { document.dispatchEvent(
+        new CustomEvent("rt", {
+          detail: { messaggio: "Loading!" },
+        })
+      );}, 2000)
+    </script>
+  </body>
+</html>

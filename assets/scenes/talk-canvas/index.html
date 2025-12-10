@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="stage top-left">
+        <div class="camera">
+          <div class="text">1080p / 60fps</div>
+          <div class="placeholder"></div>
+          <div class="text">f2.0 - 3.7mm</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../rt.js"></script>
+
+    <script>
+      document.dispatchEvent(
+        new CustomEvent("rt", {
+          detail: { messaggio: "Talk!" },
+        })
+      );
+    </script>
+  </body>
+</html>
